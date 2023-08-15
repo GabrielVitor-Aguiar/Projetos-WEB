@@ -1,0 +1,109 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o header */
+header {
+    background-color: #2f2841;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section {
+    background-color: #4a3e67;
+    color: #0eca75;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #0eca75;
+}
+
+
+/* Estilos para os destinos */
+
+.text {
+    background-color: #4a3e67;
+    color: #0eca75;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+    height: 10%;
+}
+
+.caixa {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #2f2841;
+    border-radius: 30px;
+    margin: 10px 20px;
+}
+
+.destinos {
+    padding: 25px 0 50px 0;
+    text-align: center;
+}
+
+.destino {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.destino p {
+    display: flex;
+    text-align: center;
+}
+
+.destino a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.destino img {
+    max-width: 100%;
+    position:sticky;
+    justify-content: center;
+    border-radius: 10px;
+    outline:#2f2841 solid 3px;}
+
+
+/* Estilos para o footer */
+footer {
+    background-color: #2f2841;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+

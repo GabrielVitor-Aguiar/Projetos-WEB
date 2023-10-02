@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo - Verificar Planeta</title>
+    <link rel="stylesheet" href="segundo.css">
+</head>
+<body>
+    <h1>Verificar Planeta</h1>
+    
+    <form>
+        <label for="planeta">Digite o nome de um planeta:</label>
+        <input type="text" id="planeta" name="planeta" autofocus>
+        <button type="button" onclick="verificarPlaneta()">Verificar</button>
+    </form>
+    
+    <div id="resultado"></div><br><br>
+
+    <button onclick="location.href = 'index.html';">Voltar para a Home</button>
+
+    <script>
+        const planetas = ["Terra", "Marte", "Vênus", "Júpiter", "Saturno", "Urano", "Netuno", "Mercúrio", "Plutão"];
+
+        function verificarPlaneta() {
+            const planetaUsuario = document.getElementById("planeta").value;
+            const resultado = document.getElementById("resultado");
+
+            if (planetas.includes(planetaUsuario)) {
+                if (planetaUsuario === "Plutão") {
+                    alert("Plutão não é considerado um planeta.");
+                 } else {
+                    alert(`O planeta ${planetaUsuario} está na lista.`);
+                 }
+            } else {
+                alert(`O planeta ${planetaUsuario} não está na lista.`);
+            }
+        }
+    </script>
+</body>
+</html>

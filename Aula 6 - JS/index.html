@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+</head>
+<body>
+   <!--  PRIMEIRO EXERCÍCIO
+    <h1>Somar Números</h1>
+    <script>
+        function somarNumeros() {
+        const a = parseFloat(prompt("Digite o primeiro número:"));
+        const b = parseFloat(prompt("Digite o segundo número:"));
+        const resultado = a + b;
+        document.write(`A soma é: ${resultado}`);
+    }
+    </script>
+
+    <button onclick="somarNumeros()">Calcular Soma</button> -->
+
+
+
+    <!-- SEGUNDO EXERCÍCIO
+    <h1> verificar número par ou impar </h1>
+    
+    <script>
+    function verificarNumeroPar() {
+        const numero = parseInt(prompt("Digite um número:"));
+        const par = numero % 2 === 0;
+        if (par) {
+            document.write(`O número ${numero} é par.`);
+        } else {
+            document.write(`O número ${numero} é ímpar.`);
+            }
+        }
+      
+        verificarNumeroPar();
+    </script> -->
+
+
+
+    <!-- TERCEIRO EXERCÍCIO
+    <h1>Calcular Média Aritmética</h1>
+
+    <script>
+        function calcularMedia() {
+            const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            const nota3 = parseFloat(prompt("Digite a terceira nota:"));
+            const nota4 = parseFloat(prompt("Digite a quarta nota:"));
+
+            const total = nota1 + nota2 + nota3 + nota4;
+            const media = total / 4;
+
+            document.write(`A média das notas é: ${media.toFixed(2)}`);
+        }
+
+        calcularMedia();
+    </script>  -->
+
+
+
+    <!-- QUARTO EXERCÍCIO
+    <h1>Converter Centímetros para Polegadas</h1>
+
+    <script>
+        function converterCentimetrosParaPolegadas() {
+            const centimetros = parseFloat(prompt("Digite o valor em centímetros:"));
+            const polegadas = centimetros / 2.54;
+            document.write(`${centimetros} centímetros equivalem a ${polegadas.toFixed(2)} polegadas`);
+        }
+    
+        converterCentimetrosParaPolegadas();
+    </script> -->
+
+
+
+    <!-- QUINTO EXERCÍCIO
+    <h1>Verificar Triângulo</h1>
+
+    <script>
+        //para formar um triangulo, a soma de seus dois lados precisa ser maior que o último//
+        function verificarTriangulo() {
+            const a = parseFloat(prompt("Digite o valor do primeiro lado:"));
+            const b = parseFloat(prompt("Digite o valor do segundo lado:"));
+            const c = parseFloat(prompt("Digite o valor do terceiro lado:"));
+
+            if (a + b > c && a + c > b && b + c > a) {
+                document.write("Os valores formam um triângulo.");
+            } else {
+                document.write("Os valores não formam um triângulo.");
+            }
+        }
+
+        verificarTriangulo();
+    </script> -->
+
+
+
+    <!-- SEXTO EXERCÍCIO
+    <h1>Calcular Área do Triângulo</h1>
+
+    <script>
+        //A área do triangulo é a área do quadrado dividida por 2//
+        function calcularAreaTriangulo() {
+            const base = parseFloat(prompt("Digite o valor da base do triângulo:"));
+            const altura = parseFloat(prompt("Digite o valor da altura do triângulo:"));
+
+            const area = (base * altura) / 2;
+
+            document.write(`A área do triângulo é: ${area.toFixed(2)}cm`);
+        }
+
+        calcularAreaTriangulo();
+    </script> -->
+
+
+
+    <!-- OITAVO EXERCÍCIO
+    <h1>Calcular Desconto</h1>
+
+    <script>
+        function calcularDesconto() {
+            const valor = parseFloat(prompt("Digite o valor do produto:"));
+            const percentualDesconto = parseFloat(prompt("Digite o desconto:"));
+    
+            const desconto = (valor * percentualDesconto) / 100;
+            const valorComDesconto = valor - desconto;
+    
+            document.write(`O valor com desconto é: ${valorComDesconto.toFixed(2)} reais`);
+        }
+    
+        calcularDesconto();
+    </script> -->
+
+
+
+
+</body>
+</html>

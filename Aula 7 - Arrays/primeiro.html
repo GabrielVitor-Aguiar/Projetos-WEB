@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro - Lista de Alunos</title>
+    <link rel="stylesheet" href="primeiro.css">
+</head>
+<body>
+    <h1>Cadastrar Estudantes</h1>
+    
+    <form>
+        <label for="nome">Digite o nome do estudante (ou 'PARE' para encerrar):</label>
+        <input type="text" id="nome" name="nome" autofocus>
+        <button type="button" onclick="cadastrarEstudante()">Cadastrar</button>
+    </form>
+    
+    <h2>Lista de Estudantes</h2>
+    <ul id="listaEstudantes"></ul><br><br>
+
+    <button onclick="location.href = 'index.html';">Voltar para a Home</button>
+
+    <script>
+        const estudantes = []; //array vazio que vai receber os nomes
+
+        function cadastrarEstudante() {
+            const nome = document.getElementById("nome").value;
+            if (nome.toUpperCase() === "PARE") { //quando o input receber "PARE", um alert vai exibir o resultado
+                exibirResultado();
+                return;
+            }
+            estudantes.push(nome); //A cada nome escrito no input, ele será empurrado para o final do array
+            document.getElementById("listaEstudantes").innerHTML = "";
+            
+            for (const estudante of estudantes) {
+                const itemLista = document.createElement("li"); //Faz com que os nomes sejam organizados em lista no html
+                itemLista.textContent = estudante;
+                document.getElementById("listaEstudantes").appendChild(itemLista); //e escritos no html
+            }
+        }
+
+        function exibirResultado() { //Ao final do código, quando o botão é apertado, mostra um alert com o resultado final
+            if (estudantes.length === 0) {
+                alert("Nenhum estudante cadastrado.");
+            } else {
+                alert(`Quantidade de estudantes cadastrados: ${estudantes.length}\nLista de estudantes: ${estudantes.join(", ")}`);
+            }
+        }
+    </script>
+</body>
+</html>

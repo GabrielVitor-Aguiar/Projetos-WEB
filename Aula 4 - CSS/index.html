@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!---BARRA DE NAVEGAÇÃO VERTICAL NA LATERAL ESQUERDA-->
+    <div class="navbar">
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">home</span>
+            <h2>Home</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">search</span>
+            <h2>Explorar</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">notifications</span>
+            <h2>Notificação</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">mail</span>
+            <h2>Mensagens</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">bookmark</span>
+            <h2>Salvos</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">person</span>
+            <h2>Perfil</h2>
+        </div>
+        <div class="navbar_config">
+            <span class="material-symbols-outlined">more_horiz</span>
+            <h2>Mais</h2>
+        </div>
+        <button class="navbar_button">Tweet</button>
+    </div>
+
+
+<!---FEED CENTRAL COM POSTS--->
+    <div class="feed">
+
+        <!--CABEÇALHO-->
+        <div class="feed-header">
+            <h2>Feed</h2>
+        </div>
+        <div class="box">
+            <form>
+                <div class="box-input">
+                    <img src="imagens/mordecai.png" alt="Perfil">
+                    <input type="text" placeholder="O que está acontecendo?">
+                </div>
+                <button class="box-button">Enviar</button>
+            </form>
+        </div>
+
+
+        <!--CORPO DO FEED-->
+        <div class="content">
+            <div class="content-icon">
+                <img src="imagens/mordecai.png" alt="Perfil">
+            </div>
+            <div class="content-content">
+                <div class="content-header">
+                    <div class="content-header-inform">
+                        <h3>Twitter
+                        <span class="content-header-name">
+                            <span>@twitter</span>
+                        </span>
+                        </h3>
+                    </div>
+                    <div class="content-desc">
+                        <p>Tentaram mudar meu nome e minha foto pra X</p>
+                    </div>
+                </div>
+
+                <img src="imagens/tweet.png" alt="sim">
+                <!--ICONES DO POST-->
+                <div class="content-footer">
+                    <span class="material-symbols-outlined">repeat</span>
+                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-symbols-outlined">send</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

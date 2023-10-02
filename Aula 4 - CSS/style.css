@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.navbar {
+    border-right: 1px solid #1d9bf0;
+    flex: 0.2;
+    min-width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar_config {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar_config .material-icons{
+    padding: 20px;
+}
+
+.navbar_config h2{
+    font-weight: 800;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.navbar_config:hover{
+    background-color: #e6e6e6;
+    border-radius: 30px;
+    color: #1d9bf0;
+    transition: color 100ms ease-out;
+}
+
+.navbar_button {
+    width: 100%;
+    background-color: #1d9bf0;
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+
+.feed {
+    flex: 0.5;
+    border-right: 1px solid #e6e6e6;
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.feed-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid #e6e6e6;
+    padding: 15px 20px;
+}
+
+.feed h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.box {
+    padding-bottom: 10px;
+    border-bottom: 8px solid #e6e6e6;
+    padding-right: 10px;
+}
+
+.box-input {
+    display: flex;
+    padding: 20px;
+}
+
+.box-input input {
+    flex: 1;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.box-input img{
+    border-radius: 50%;
+    height: 40px;
+}
+
+.box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-button {
+    background-color: #1d9bf0;
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-left: auto;
+}
+
+
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+
+.content-icon img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.content-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.content-content img {
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+    outline: auto;
+}
+
+.content-header-inform h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.content-header-name {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.content-desc {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.box-button:hover, .navbar_button:hover {
+    background-color: #15202b;
+    border-radius: 30px;
+    color: #ffffff;
+    transition: color 100ms ease-out;
+}

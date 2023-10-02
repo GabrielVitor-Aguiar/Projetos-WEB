@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro - Lista de Frutas</title>
+    <link rel="stylesheet" href="terceiro.css">
+</head>
+<body>
+    <h1>Lista de Compras de Frutas</h1>
+    
+    <h2>Frutas Disponíveis</h2>
+    <ul id="listaFrutas">
+        <li>Maçã</li>
+        <li>Banana</li>
+        <li>Morango</li>
+        <li>Pera</li>
+        <li>Uva</li>
+    </ul>
+    
+    <form>
+        <label for="fruta">Digite o nome de uma fruta:</label>
+        <input type="text" id="fruta" name="fruta" autofocus placeholder="Digite as frutas como estão escritas na lista">
+        <button type="button" onclick="adicionarFruta()">Adicionar</button>
+    </form>
+    
+    <h2>Carrinho de Compras</h2>
+    <ul id="carrinho"></ul>
+    
+    <button type="button" onclick="enviarCarrinho()">Enviar</button><br><br>
+
+    <button onclick="location.href = 'index.html';">Voltar para a Home</button>
+
+    <script>
+        const frutasDisponiveis = ["Maçã", "Banana", "Morango", "Pera", "Uva"]; //array do cardápio com todas as frutas
+        const carrinho = []; //array vazio do carrinho que receberá as frutas que o usuário escrever
+
+        function adicionarFruta() { //essa função está ligada ao input e recebe os valores (frutas) que o usuário escrever
+            const frutaUsuario = document.getElementById("fruta").value;
+            const carrinhoLista = document.getElementById("carrinho");
+            
+            if (frutasDisponiveis.includes(frutaUsuario)) { //se as frutas escritas estiverem presentes no array
+                carrinho.push(frutaUsuario); //empurra para o array do carrinho
+                const index = frutasDisponiveis.indexOf(frutaUsuario);
+                frutasDisponiveis.splice(index, 1); //remove do array frutasDisponiveis
+                atualizarLista();
+                atualizarCarrinho(); //chama as funções de atualizar ambas as listas
+            } else {
+                alert("Fruta indisponível no nosso mercado.");
+            }
+            
+            document.getElementById("fruta").value = "";
+        }
+
+        function atualizarLista() { //aqui é onde a lista de frutas disponiveis é atualizada
+            const listaFrutas = document.getElementById("listaFrutas");
+            listaFrutas.innerHTML = "";
+            for (const fruta of frutasDisponiveis) {
+                const itemLista = document.createElement("li");
+                itemLista.textContent = fruta;
+                listaFrutas.appendChild(itemLista);
+            }
+        }
+
+        function atualizarCarrinho() { //o mesmo que acima acontece aqui
+            const carrinhoLista = document.getElementById("carrinho");
+            carrinhoLista.innerHTML = "";
+            for (const item of carrinho) {
+                const itemCarrinho = document.createElement("li");
+                itemCarrinho.textContent = item;
+                carrinhoLista.appendChild(itemCarrinho);
+            }
+        }
+
+        function enviarCarrinho() { //quando apertar o botão vai chamar um alert
+            alert("Itens no carrinho:\n" + carrinho.join(", "));
+        }
+    </script>
+</body>
+</html>
